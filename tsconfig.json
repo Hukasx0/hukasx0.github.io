@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "types": [
+      "@xstyled/styled-components"
+    ],
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
