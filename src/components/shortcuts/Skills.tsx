@@ -153,6 +153,10 @@ function Skills(showModal: boolean, closeModal: (event: React.MouseEvent<Element
                     <h3>Figma</h3>
                     </Skill>
                     <Skill>
+                    <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-icon.svg" width="40px" alt="Figma logo" />
+                    <h3>Jupyter Notebook</h3>
+                    </Skill>
+                    <Skill>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" width="50px" alt="Linux logo" />
                     <h3>Linux</h3>
                     </Skill>
