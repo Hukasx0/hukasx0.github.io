@@ -1,4 +1,4 @@
-import {  Drvspace7, Packager, Wordpad, WindowsExplorer, Shell3233, Computer } from '@react95/icons'
+import {  Drvspace7, Packager, Wordpad, WindowsExplorer, Shell3233, Computer, Mspaint } from '@react95/icons'
 import styled from 'styled-components';
 
 const Icon = styled.div`
@@ -17,7 +17,8 @@ const Icon = styled.div`
 
 function Shortcuts(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => void,
                    openCv: (event: React.MouseEvent<Element, MouseEvent>) => void,
-                   openPortfolio: (event: React.MouseEvent<Element, MouseEvent>) => void) {
+                   openPortfolio: (event: React.MouseEvent<Element, MouseEvent>) => void,
+                   openSkills: (event: React.MouseEvent<Element, MouseEvent>) => void) {
   return (
     <>
     <Icon>
@@ -39,6 +40,10 @@ function Shortcuts(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => 
       <Icon>
       <Drvspace7 variant="32x32_4" onClick={openAbout}/>
         About me
+      </Icon>
+      <Icon>
+      <Mspaint variant="32x32_4" onClick={openSkills}/>
+        Skills
       </Icon>
       <Icon>
       <Shell3233 variant="32x32_4" />

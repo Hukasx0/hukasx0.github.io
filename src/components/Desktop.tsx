@@ -4,6 +4,7 @@ import Shortcuts from './Shortcuts';
 import About from './shortcuts/About';
 import CV from './shortcuts/CV';
 import Portfolio from './shortcuts/Portfolio';
+import Skills from './shortcuts/Skills';
 
 function Desktop() {
   const isMobile =
@@ -41,13 +42,24 @@ function Desktop() {
       setPortfolioModal(false);
     }, []);
 
+    const [skillsModal, setSkillsModal] = useState(false);
+
+    const openSkillsModal = useCallback(() => {
+      setSkillsModal(true);
+    }, []);
+
+    const closeSkillsModal = useCallback(() => {
+      setSkillsModal(false);
+    }, []);
+
   return (
     <>
         { About(aboutModal, closeAboutModal, isMobile) }
         { CV(cvModal, closeCvModal, isMobile) }
         { Portfolio(portfolioModal, closePortfolioModal, isMobile) }
-        { Shortcuts(openAboutModal, openCvModal, openPortfolioModal) }
-        { Taskbar(openAboutModal, openCvModal, openPortfolioModal) }
+        { Shortcuts(openAboutModal, openCvModal, openPortfolioModal, openSkillsModal) }
+        { Skills(skillsModal, closeSkillsModal, isMobile) }
+        { Taskbar(openAboutModal, openCvModal, openPortfolioModal, openSkillsModal) }
     </>
   )
 }

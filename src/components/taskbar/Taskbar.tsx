@@ -3,7 +3,8 @@ import { Main200, MsnsignIcoApp, Wininet32546, Winhlp324000, Mail, Mapi32801, Mc
 
 function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => void,
                  openCv: (event: React.MouseEvent<Element, MouseEvent>) => void,
-                 openPortfolio: (event: React.MouseEvent<Element, MouseEvent>) => void) {
+                 openPortfolio: (event: React.MouseEvent<Element, MouseEvent>) => void,
+                 openSkills: (event: React.MouseEvent<Element, MouseEvent>) => void) {
   return (
     <TaskBar
         list={
@@ -97,12 +98,16 @@ function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => vo
               Contact
             </List.Item>
             <List.Item
-                icon={<Mspaint variant="32x32_4"/>}>
+                icon={<Mspaint variant="32x32_4"/>}
+                onClick={openSkills}
+                >
               Skills
             </List.Item>
             <List.Divider />
             <List.Item
-                icon={<Winhlp324000 variant='32x32_4' />}>
+                icon={<Winhlp324000 variant='32x32_4' />}
+                onClick={openAbout}
+                >
               About
             </List.Item>
           </List>
