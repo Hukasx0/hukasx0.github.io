@@ -1,7 +1,9 @@
 import { TaskBar, List } from '@react95/core';
 import { Main200, MsnsignIcoApp, Wininet32546, Winhlp324000, Mail, Mapi32801, Mcm502, Awfxcg321305, Wmsui323924, Notepad2, Mspaint } from '@react95/icons'
 
-function Taskbar() {
+function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => void,
+                 openCv: (event: React.MouseEvent<Element, MouseEvent>) => void,
+                 openPortfolio: (event: React.MouseEvent<Element, MouseEvent>) => void) {
   return (
     <TaskBar
         list={
@@ -12,18 +14,19 @@ function Taskbar() {
               <List>
                 <List.Item
                 icon={<Notepad2 variant="32x32_4"/>}
+                onClick={openPortfolio}
               >
               projects.txt
               </List.Item>
               <List.Item
                 icon={<Notepad2 variant="32x32_4"/>}
-                
+                onClick={openCv}
               >
               cv.txt
               </List.Item>
               <List.Item
                 icon={<Notepad2 variant="32x32_4"/>}
-                
+                onClick={openAbout}
               >
               about_me.txt
               </List.Item>
@@ -86,7 +89,11 @@ function Taskbar() {
               </List>
             </List.Item>
             <List.Item
-                icon={<Mail variant='32x32_4' />}>
+                icon={<Mail variant='32x32_4' />}
+                onClick={() => {
+                  window.location.href = `mailto:hubertkasp13@gmail.com`;
+                }}
+                >
               Contact
             </List.Item>
             <List.Item

@@ -16,7 +16,8 @@
     "@react95/core": "^6.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^5.3.11"
+    "styled-components": "^5.3.11",
+    "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
