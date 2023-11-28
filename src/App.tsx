@@ -5,9 +5,8 @@ import './App.scss'
 function App() {
   return (
     <>
-     <ThemeProvider>
+     <ThemeProvider theme='storm'>
      <div className="scanlines"></div>
-     
       <Desktop />
     </ThemeProvider>
     </>

@@ -12,6 +12,16 @@ const ImageDiv = styled.div`
   }
 `;
 
+const Socials = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  a, img {
+    cursor: pointer;
+  }
+`
+
 
 function About(showModal: boolean, closeModal: (event: React.MouseEvent<Element, MouseEvent>) => void, isMobile: boolean) {
   return (
@@ -35,6 +45,27 @@ function About(showModal: boolean, closeModal: (event: React.MouseEvent<Element,
              <h2>Over the years I have learned many concepts from: Backend (Rust, Actix, C#, ASP .NET, Node.js), Database (Sql , NoSql), Frontend (React, Angular, Svelte, Solid), Fullstack, Artificial Intelligence (Large Language Models, Stable Diffusion), Low level programming (Assembly AMD64), cyber security and penetration testing (use of nmap, hashcat, burp suite) and backend design. </h2>
              <h2>My projects are diverse, starting with my own <a href="https://github.com/Hukasx0/HALM-Assembler" target="_blank">Assembler written in Haskell</a>, going through a <a href="https://github.com/Hukasx0/rogger" target="_blank">fullstack application for bloggers</a> and ending with a <a href="https://github.com/Hukasx0/ai-companion" target="_blank">program for simple creation of AI chatbots</a> or a <a href="https://github.com/Hukasx0/character-factory" target="_blank">script with WebUI for creating AI characters.</a> and MANY MORE!</h2>
               </span>
+              <h1>My socials</h1>
+              <Socials>
+              <a href="https://github.com/Hukasx0" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="40px" />
+              </a>
+              <a href="https://misskey.gg/@Hukasx0" target="_blank">
+                <img src="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png" width="40px" />
+              </a>
+              <a href="https://matrix.to/#/@hukasx0:matrix.org" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Matrix_icon.svg" width="35px" />
+              </a>
+              <a href="https://tryhackme.com/p/Hukasx0" target="_blank">
+                <img src="https://assets.tryhackme.com/img/THMlogo.png" width="40px" />
+              </a>
+              <a href="https://app.hackthebox.com/profile/696093" target="_blank">
+                <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/l72z2dydduvghanfmvgz" width="40px" />
+              </a>
+              <a href="https://leetcode.com/Hukasx0/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" width="40px" />
+              </a>
+              </Socials>
             </S.textModal>
           </S.layoutMainContent>
         </S.layoutMain>
