@@ -48,7 +48,7 @@ function Portfolio(showModal: boolean, closeModal: (event: React.MouseEvent<Elem
                 <h2><a href="https://github.com/Hukasx0/rogger" target='_blank'>Rogger</a></h2>
                 <img src="https://hukasx0.github.io/portfolio/assets/rogger-img-2c100b00.png" alt="Rogger admin panel screenshot" />
                 <h2>Rust, Actix, JavaScript, SQLite, Docker</h2>
-                <h3>Very lightweight, efficient, secure and easy to use Blog Content Management System (CMS)</h3>
+                <h3>Very lightweight, efficient, secure and easy to use Fullstack Blog Content Management System (CMS)</h3>
               </SkillContainer>
               <SkillContainer>
                 <h2><a href="https://github.com/Hukasx0/zsp2wagrowiec-strona" target='_blank'>ZSP2 Wagrowiec website</a></h2>

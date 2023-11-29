@@ -1,5 +1,5 @@
 import { TaskBar, List } from '@react95/core';
-import { Main200, MsnsignIcoApp, Wininet32546, Winhlp324000, Mail, Mapi32801, Mcm502, Awfxcg321305, Wmsui323924, Notepad2, Mspaint } from '@react95/icons'
+import { Main200, MsnsignIcoApp, Wininet32546, Winhlp324000, Mail, Mapi32801, Mcm502, Awfxcg321305, Wmsui323924, Notepad2, Mspaint, Packager } from '@react95/icons'
 
 function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => void,
                  openCv: (event: React.MouseEvent<Element, MouseEvent>) => void,
@@ -96,6 +96,12 @@ function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => vo
                 }}
                 >
               Contact
+            </List.Item>
+            <List.Item
+                icon={<Packager variant="32x32_4"/>}
+                onClick={openPortfolio}
+              >
+              Projects
             </List.Item>
             <List.Item
                 icon={<Mspaint variant="32x32_4"/>}

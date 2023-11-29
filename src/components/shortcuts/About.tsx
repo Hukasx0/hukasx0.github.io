@@ -1,3 +1,4 @@
+import { Button } from '@react95/core';
 import { Drvspace7 } from '@react95/icons';
 import * as S from '../layoutStyling';
 
@@ -22,6 +23,9 @@ const Socials = styled.div`
   }
 `
 
+const contactStyle = {
+  "margin-top": "30px"
+}
 
 function About(showModal: boolean, closeModal: (event: React.MouseEvent<Element, MouseEvent>) => void, isMobile: boolean) {
   return (
@@ -42,8 +46,8 @@ function About(showModal: boolean, closeModal: (event: React.MouseEvent<Element,
               <h1>Hubert "Hukasx0" Kasperek</h1>
               <span>
              <h2> I am a young programmer with a passion for computers, for years I have been interested in learning new technologies, programming languages, libraries, frameworks, ways to solve problems. </h2>
-             <h2>Over the years I have learned many concepts from: Backend (Rust, Actix, C#, ASP .NET, Node.js), Database (Sql , NoSql), Frontend (React, Angular, Svelte, Solid), Fullstack, Artificial Intelligence (Large Language Models, Stable Diffusion), Low level programming (Assembly AMD64), cyber security and penetration testing (use of nmap, hashcat, burp suite) and backend design. </h2>
-             <h2>My projects are diverse, starting with my own <a href="https://github.com/Hukasx0/HALM-Assembler" target="_blank">Assembler written in Haskell</a>, going through a <a href="https://github.com/Hukasx0/rogger" target="_blank">fullstack application for bloggers</a> and ending with a <a href="https://github.com/Hukasx0/ai-companion" target="_blank">program for simple creation of AI chatbots</a> or a <a href="https://github.com/Hukasx0/character-factory" target="_blank">script with WebUI for creating AI characters.</a> and MANY MORE!</h2>
+             <h2>Over the years I have learned many concepts from: Backend (Rust, Actix, C#, ASP .NET, Node.js), Databases (Sql , NoSql), Frontend (React, Angular, Svelte, Solid), Fullstack, Artificial Intelligence (Large Language Models, Stable Diffusion), Low level programming (Assembly AMD64), Cyber Security, Penetration Testing and Bug Bounty (Finding security vulnerabilities in servers, applications and code), backend design and frontend design</h2>
+             <h2>My projects are diverse, starting with my own <a href="https://github.com/Hukasx0/HALM-Assembler" target="_blank">Assembler written in Haskell</a>, going through a <a href="https://github.com/Hukasx0/rogger" target="_blank">Content Management System (CMS) for bloggers written in Rust</a> and ending with a <a href="https://github.com/Hukasx0/ai-companion" target="_blank">Backend + API for creation of AI chatbots written in Rust with React WebUI</a> and a <a href="https://github.com/Hukasx0/character-factory" target="_blank">script with Gradio WebUI for creating AI characters.</a> and many more available on my <a href="https://github.com/Hukasx0" target='_blank'>GitHub</a></h2>
               </span>
               <h1>My socials</h1>
               <Socials>
@@ -66,6 +70,9 @@ function About(showModal: boolean, closeModal: (event: React.MouseEvent<Element,
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" width="40px" />
               </a>
               </Socials>
+              <Button onClick={() => {
+                window.location.href = `mailto:hubertkasp13@gmail.com`;
+              }} style={contactStyle}>Contact me</Button>
             </S.textModal>
           </S.layoutMainContent>
         </S.layoutMain>
