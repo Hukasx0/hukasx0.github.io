@@ -35,3 +35,10 @@ $screen-background: #121010;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
 }
+
+.bg {
+  background-image: url('https://www.pixelstalk.net/wp-content/uploads/images6/Pink-Aesthetic-Vaporwave-Wallpaper-HD.jpg');
+  @media (max-height: 1047px) {
+    background-position: center;
+  }
+}
