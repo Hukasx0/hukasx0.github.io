@@ -24,7 +24,7 @@ const Socials = styled.div`
 `
 
 const contactStyle = {
-  "margin-top": "30px"
+  marginTop: "30px"
 }
 
 function About(showModal: boolean, closeModal: (event: React.MouseEvent<Element, MouseEvent>) => void, isMobile: boolean) {
