@@ -32,6 +32,12 @@ function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => vo
               >
               about_me.txt
               </List.Item>
+              <List.Item
+                icon={<Notepad2 variant="32x32_4"/>}
+                onClick={openSkills}
+              >
+              skills.txt
+              </List.Item>
               </List>
             </List.Item>
             <List.Item
@@ -114,7 +120,7 @@ function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => vo
                 icon={<Winhlp324000 variant='32x32_4' />}
                 onClick={openAbout}
                 >
-              About
+              About me
             </List.Item>
             <List.Divider />
             <List.Item

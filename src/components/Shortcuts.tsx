@@ -1,7 +1,11 @@
 import {  Drvspace7, Packager, Wordpad, Computer, Shell3233, Mspaint, Shell3241 } from '@react95/icons'
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const Icon = styled.div`
+interface IconProps {
+  clickable?: boolean;
+}  
+
+const Icon = styled.div<IconProps>`
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -10,10 +14,15 @@ const Icon = styled.div`
   text-align: center;
   justify-content: center;
   margin: 12px;
-  * {
-    cursor: pointer;
-  }
-`
+
+  ${(props) =>
+    props.clickable &&
+    css`
+      * {
+        cursor: pointer;
+      }
+    `}
+`;
 
 function Shortcuts(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => void,
                    openCv: (event: React.MouseEvent<Element, MouseEvent>) => void,
@@ -26,30 +35,30 @@ function Shortcuts(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => 
     <Computer variant="32x32_4"/>
         My computer
     </Icon>
-    <Icon>
+    <Icon clickable={true}>
       <Shell3241 variant="32x32_4" onClick={openWebamp}/>
         winamp.exe
     </Icon>
-    <Icon>
+    <Icon clickable={true}>
       <Packager variant="32x32_4" onClick={openPortfolio}/>
-        Projects
-      </Icon>
-        <Icon>
-        <Wordpad variant="32x32_4" onClick={openCv}/>
-        CV
-      </Icon>
-      <Icon>
+      Projects
+    </Icon>
+    <Icon clickable={true}>
+      <Wordpad variant="32x32_4" onClick={openCv}/>
+      CV
+    </Icon>
+    <Icon clickable={true}>
       <Drvspace7 variant="32x32_4" onClick={openAbout}/>
         About me
-      </Icon>
-      <Icon>
+    </Icon>
+    <Icon clickable={true}>
       <Mspaint variant="32x32_4" onClick={openSkills}/>
         Skills
-      </Icon>
-      <Icon>
+    </Icon>
+    <Icon>
       <Shell3233 variant="32x32_4" />
         Trash
-      </Icon>
+    </Icon>
     </>
   )
 }

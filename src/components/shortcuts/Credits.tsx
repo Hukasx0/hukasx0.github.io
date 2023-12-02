@@ -25,7 +25,7 @@ function Credits(showModal: boolean, closeModal: (event: React.MouseEvent<Elemen
             <S.textModal>
               <h1>Credits</h1>
               <span>
-                <h2>The site was created using <a href="https://react.dev/" target='_blank'>React</a> and <a href="https://github.com/React95/React95" target='_blank'>React95</a> (a library with Windows95 components)</h2>
+                <h2>This website was created using <a href="https://react.dev/" target='_blank'>React</a> and <a href="https://github.com/React95/React95" target='_blank'>React95</a> (a library with Windows95 components)</h2>
                 <h2><a href="https://github.com/captbaritone/webamp" target='_blank'>Webamp</a> (the browser-based equivalent of Winamp 2.9)</h2>
                 <h2>Theme for Webamp: <a href="https://skins.webamp.org/skin/5a214ec76a65200aa4c188e5e444b7de/Virtual_Reality.wsz/" target='_blank'>Virtual_Reality.wsz</a></h2>
                 <h2>The <a href="https://www.pixelstalk.net/wp-content/uploads/images6/Pink-Aesthetic-Vaporwave-Wallpaper-HD.jpg" target='_blank'>wallpaper</a> you see on the page comes from here: <a href="https://www.pixelstalk.net/" target='_blank'>pixelstalk.net</a></h2>
