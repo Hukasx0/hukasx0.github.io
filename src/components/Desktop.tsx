@@ -5,6 +5,8 @@ import About from './shortcuts/About';
 import CV from './shortcuts/CV';
 import Portfolio from './shortcuts/Portfolio';
 import Skills from './shortcuts/Skills';
+import Credits from './shortcuts/Credits';
+import WebampComponent from './shortcuts/MusicPlayer';
 
 function Desktop() {
   const isMobile =
@@ -52,14 +54,32 @@ function Desktop() {
       setSkillsModal(false);
     }, []);
 
+    const [creditsModal, setCreditsModal] = useState(false);
+
+    const openCreditsModal = useCallback(() => {
+      setCreditsModal(true);
+    }, []);
+
+    const closeCreditsModal = useCallback(() => {
+      setCreditsModal(false);
+    }, []);
+
+    const [webampDisplay, setWebampDisplay] = useState(false);
+
+    const openWebamp = useCallback(() => {
+      setWebampDisplay(true);
+    }, []);
+
   return (
     <>
         { About(aboutModal, closeAboutModal, isMobile) }
         { CV(cvModal, closeCvModal, isMobile) }
         { Portfolio(portfolioModal, closePortfolioModal, isMobile) }
-        { Shortcuts(openAboutModal, openCvModal, openPortfolioModal, openSkillsModal) }
         { Skills(skillsModal, closeSkillsModal, isMobile) }
-        { Taskbar(openAboutModal, openCvModal, openPortfolioModal, openSkillsModal) }
+        { Credits(creditsModal, closeCreditsModal, isMobile) }
+        { WebampComponent(webampDisplay, setWebampDisplay)}
+        { Shortcuts(openAboutModal, openCvModal, openPortfolioModal, openSkillsModal, openWebamp) }
+        { Taskbar(openAboutModal, openCvModal, openPortfolioModal, openSkillsModal, openCreditsModal) }
     </>
   )
 }

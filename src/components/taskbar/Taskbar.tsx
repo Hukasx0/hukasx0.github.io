@@ -1,10 +1,11 @@
 import { TaskBar, List } from '@react95/core';
-import { Main200, MsnsignIcoApp, Wininet32546, Winhlp324000, Mail, Mapi32801, Mcm502, Awfxcg321305, Wmsui323924, Notepad2, Mspaint, Packager } from '@react95/icons'
+import { Main200, MsnsignIcoApp, Wininet32546, Winhlp324000, Mail, Mapi32801, Mcm502, Awfxcg321305, Wmsui323924, Notepad2, Mspaint, Packager, Mailnews20 } from '@react95/icons'
 
 function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => void,
                  openCv: (event: React.MouseEvent<Element, MouseEvent>) => void,
                  openPortfolio: (event: React.MouseEvent<Element, MouseEvent>) => void,
-                 openSkills: (event: React.MouseEvent<Element, MouseEvent>) => void) {
+                 openSkills: (event: React.MouseEvent<Element, MouseEvent>) => void,
+                 openCredits: (event: React.MouseEvent<Element, MouseEvent>) => void) {
   return (
     <TaskBar
         list={
@@ -109,12 +110,18 @@ function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => vo
                 >
               Skills
             </List.Item>
-            <List.Divider />
             <List.Item
                 icon={<Winhlp324000 variant='32x32_4' />}
                 onClick={openAbout}
                 >
               About
+            </List.Item>
+            <List.Divider />
+            <List.Item
+                icon={<Mailnews20 variant='32x32_4' />}
+                onClick={openCredits}
+                >
+              Credits
             </List.Item>
           </List>
         }

@@ -1,4 +1,4 @@
-import {  Drvspace7, Packager, Wordpad, WindowsExplorer, Shell3233, Computer, Mspaint } from '@react95/icons'
+import {  Drvspace7, Packager, Wordpad, Computer, Shell3233, Mspaint, Shell3241 } from '@react95/icons'
 import styled from 'styled-components';
 
 const Icon = styled.div`
@@ -18,16 +18,17 @@ const Icon = styled.div`
 function Shortcuts(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => void,
                    openCv: (event: React.MouseEvent<Element, MouseEvent>) => void,
                    openPortfolio: (event: React.MouseEvent<Element, MouseEvent>) => void,
-                   openSkills: (event: React.MouseEvent<Element, MouseEvent>) => void) {
+                   openSkills: (event: React.MouseEvent<Element, MouseEvent>) => void,
+                   openWebamp: (event: React.MouseEvent<Element, MouseEvent>) => void) {
   return (
     <>
     <Icon>
-      <WindowsExplorer variant="32x32_4"/>
-        Explorer
+    <Computer variant="32x32_4"/>
+        My computer
     </Icon>
     <Icon>
-      <Computer variant="32x32_4" />
-        My computer
+      <Shell3241 variant="32x32_4" onClick={openWebamp}/>
+        winamp.exe
     </Icon>
     <Icon>
       <Packager variant="32x32_4" onClick={openPortfolio}/>
