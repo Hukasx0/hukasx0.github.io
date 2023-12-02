@@ -35,14 +35,14 @@ function Portfolio(showModal: boolean, closeModal: (event: React.MouseEvent<Elem
                 <h2><a href="https://github.com/Hukasx0/character-factory" target='_blank'>Character factory</a></h2>
                 <img src="https://raw.githubusercontent.com/Hukasx0/character-factory/main/images/webui.png" alt="character factory webui screenshot" />
                 <h2>Python, Jupyter Notebook, Google Colab, Gradio, Large Language Models, Stable Diffusion</h2>
-                <h3>Python script with Gradio WebUI to automate/help create characters for SillyTavern, TavernAI, TextGenerationWebUI using artificial intelligence (Large Language Models and Stable Diffusion)</h3>
+                <h3>Python script with Gradio WebUI to automate/help create characters for SillyTavern, TavernAI, TextGenerationWebUI using artificial intelligence (Large Language Models and Stable Diffusion). This project also uses the <a href="https://github.com/Hukasx0/aichar" target='_blank'>aichar</a> library I wrote earlier for Python in the Rust language to create, parse and export AI characters/character files in different formats</h3>
                 <h3></h3>
               </SkillContainer>
               <SkillContainer>
                 <h2><a href="https://github.com/Hukasx0/ai-companion" target='_blank'>AI Companion</a></h2>
                 <img src="https://hukasx0.github.io/portfolio/assets/ai-companion-img-191daf07.png" alt="AI Companion webui screenshot" />
                 <h2>Rust, Actix, TypeScript, React, SCSS, SQLite, Large Language Models</h2>
-                <h3>Backend + API + Frontend for running large language models of artificial intelligence on the local computer, with the addition of short-term memory, long-term memory, ai learning by chatting with the user and the ability to add your own custom data</h3>
+                <h3>Backend + API + Frontend for running large language models of artificial intelligence on the local computer, with the addition of short-term memory, long-term memory, ai learning by chatting with the user and the ability to add your own custom data. Can be used as a easy to use and fast chat interface with AI chatbots or can be used as an API/Backend to other projects</h3>
               </SkillContainer>
               <SkillContainer>
                 <h2><a href="https://github.com/Hukasx0/rogger" target='_blank'>Rogger</a></h2>
@@ -63,6 +63,7 @@ function Portfolio(showModal: boolean, closeModal: (event: React.MouseEvent<Elem
                 <h2>HTML5, Bootstrap, Node.js, Express.js, Python, LaTeX</h2>
                 <h3>A fullstack application that I wrote in Node.js to manage cyclic boring server tasks in your browser in a few clicks</h3>
               </SkillContainer>
+              <h2>For the rest of the other, smaller projects or ones in which I only contributed, please visit my <a href="https://github.com/Hukasx0?tab=repositories" target='_blank'>GitHub</a></h2>
             </S.textModal>
           </S.layoutMainContent>
         </S.layoutMain>
