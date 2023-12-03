@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import Webamp from 'webamp';
 
-const WebampComponent = (webampDisplay: boolean, setWebampDisplay: React.Dispatch<React.SetStateAction<boolean>>) => {
-
+const WebampComponent: React.FC<{ webampDisplay: boolean; setWebampDisplay: React.Dispatch<React.SetStateAction<boolean>> }> = (
+  { webampDisplay, setWebampDisplay } ) => {
   useEffect(() => {
     if (webampDisplay) {
       const wa = new Webamp({
