@@ -1,7 +1,13 @@
 import { Wordpad } from '@react95/icons';
 import * as S from '../layoutStyling';
 
-function CV(showModal: boolean, closeModal: (event: React.MouseEvent<Element, MouseEvent>) => void, isMobile: boolean) {
+interface CVProps {
+  showModal: boolean;
+  closeModal: (event: React.MouseEvent<Element, MouseEvent>) => void;
+  isMobile: boolean;
+}
+
+const CV: React.FC<CVProps> = ({ showModal, closeModal, isMobile }) => {
   return (
     showModal && (
       <>

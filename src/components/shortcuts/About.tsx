@@ -4,6 +4,13 @@ import * as S from '../layoutStyling';
 
 import styled from 'styled-components';
 
+import GithubSvg from "../../assets/socials/github.svg"
+import MisskeySvg from "../../assets/socials/misskey.svg"
+import MatrixSvg from "../../assets/socials/matrix.svg"
+import TryhackmePng from "../../assets/socials/THMlogo.png"
+import HacktheboxWebp from "../../assets/socials/hackthebox.webp"
+import LeetcodePng from "../../assets/socials/leetcode.png"
+
 const ImageDiv = styled.div`
   display: flex;
   justify-content: center;
@@ -27,7 +34,13 @@ const contactStyle = {
   marginTop: "30px"
 }
 
-function About(showModal: boolean, closeModal: (event: React.MouseEvent<Element, MouseEvent>) => void, isMobile: boolean) {
+interface AboutProps {
+  showModal: boolean;
+  closeModal: (event: React.MouseEvent<Element, MouseEvent>) => void;
+  isMobile: boolean;
+}
+
+const About: React.FC<AboutProps> = ({ showModal, closeModal, isMobile }) => {
   return (
     showModal && (
       <>
@@ -52,22 +65,22 @@ function About(showModal: boolean, closeModal: (event: React.MouseEvent<Element,
               <h1>My socials</h1>
               <Socials>
               <a href="https://github.com/Hukasx0" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="40px" />
+                <img src={GithubSvg} width="40px" alt='Github' />
               </a>
               <a href="https://misskey.gg/@Hukasx0" target="_blank">
-                <img src="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png" width="40px" />
+                <img src={MisskeySvg} width="40px" alt='Misskey' />
               </a>
               <a href="https://matrix.to/#/@hukasx0:matrix.org" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Matrix_icon.svg" width="35px" />
+                <img src={MatrixSvg} width="35px" alt='Matrix' />
               </a>
               <a href="https://tryhackme.com/p/Hukasx0" target="_blank">
-                <img src="https://assets.tryhackme.com/img/THMlogo.png" width="40px" />
+                <img src={TryhackmePng} width="40px" alt='TryHackMe' />
               </a>
               <a href="https://app.hackthebox.com/profile/696093" target="_blank">
-                <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/l72z2dydduvghanfmvgz" width="40px" />
+                <img src={HacktheboxWebp} width="40px" alt='HackTheBox' />
               </a>
               <a href="https://leetcode.com/Hukasx0/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" width="40px" />
+                <img src={LeetcodePng} width="40px" alt='Leetcode' />
               </a>
               </Socials>
               <Button onClick={() => {

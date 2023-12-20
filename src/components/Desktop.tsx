@@ -1,11 +1,12 @@
 import { useState, useCallback, lazy, Suspense } from 'react';
 import Taskbar from './taskbar/Taskbar';
 import Shortcuts from './Shortcuts';
-import About from './shortcuts/About';
-import CV from './shortcuts/CV';
-import Portfolio from './shortcuts/Portfolio';
-import Skills from './shortcuts/Skills';
-import Credits from './shortcuts/Credits';
+
+const About = lazy(() => import('./shortcuts/About'));
+const CV = lazy(() => import('./shortcuts/CV'));
+const Portfolio = lazy(() => import('./shortcuts/Portfolio'));
+const Skills = lazy(() => import('./shortcuts/Skills'));
+const Credits = lazy(() => import('./shortcuts/Credits'));
 const WebampComponent = lazy(() => import('./shortcuts/MusicPlayer'));
 
 function Desktop() {
@@ -72,12 +73,14 @@ function Desktop() {
 
   return (
     <>
-        { About(aboutModal, closeAboutModal, isMobile) }
-        { CV(cvModal, closeCvModal, isMobile) }
-        { Portfolio(portfolioModal, closePortfolioModal, isMobile) }
-        { Skills(skillsModal, closeSkillsModal, isMobile) }
-        { Credits(creditsModal, closeCreditsModal, isMobile) }
-        <Suspense fallback={<div>Loading Webamp...</div>}>
+      <Suspense>
+          <About showModal={aboutModal} closeModal={closeAboutModal} isMobile={isMobile} />
+          <CV showModal={cvModal} closeModal={closeCvModal} isMobile={isMobile} />
+          <Portfolio showModal={portfolioModal} closeModal={closePortfolioModal} isMobile={isMobile} />
+          <Skills showModal={skillsModal} closeModal={closeSkillsModal} isMobile={isMobile} />
+          <Credits showModal={creditsModal} closeModal={closeCreditsModal} isMobile={isMobile} />
+        </Suspense>
+        <Suspense>
           <WebampComponent webampDisplay={webampDisplay} setWebampDisplay={setWebampDisplay} />
         </Suspense>
         { Shortcuts(openAboutModal, openCvModal, openPortfolioModal, openSkillsModal, openWebamp) }

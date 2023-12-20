@@ -9,8 +9,13 @@ const CenteredCredits = styled.div`
   gap: 10%;
 `;
 
+interface CreditsProps {
+  showModal: boolean;
+  closeModal: (event: React.MouseEvent<Element, MouseEvent>) => void;
+  isMobile: boolean;
+}
 
-function Credits(showModal: boolean, closeModal: (event: React.MouseEvent<Element, MouseEvent>) => void, isMobile: boolean) {
+const Credits: React.FC<CreditsProps> = ({ showModal, closeModal, isMobile }) => {
   return (
     showModal && (
       <>

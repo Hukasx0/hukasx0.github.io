@@ -2,6 +2,42 @@ import { Mspaint } from '@react95/icons';
 import * as S from '../layoutStyling';
 import styled from 'styled-components';
 
+import RustSvg from "../../assets/skills/rust.svg"
+import TypescriptSvg from "../../assets/skills/typescript.svg"
+import JavascriptSvg from "../../assets/skills/javascript.svg"
+import PythonSvg from "../../assets/skills/python.svg"
+import CsharpSvg from "../../assets/skills/csharp.svg"
+import HaskellSvg from "../../assets/skills/haskell.svg"
+
+import ActixPng from "../../assets/skills/actix.png"
+import NodePng from "../../assets/skills/nodejs.png"
+import DotnetSvg from "../../assets/skills/dotnet.svg"
+import ExpressSvg from "../../assets/skills/express.svg"
+import FlaskSvg from "../../assets/skills/flask.svg"
+
+import ReactSvg from "../../assets/skills/react.svg"
+import AngularSvg from "../../assets/skills/angular.svg"
+import SvelteSvg from "../../assets/skills/svelte.svg"
+import SolidSvg from "../../assets/skills/solid.svg"
+
+import MysqlSvg from "../../assets/skills/mysql.svg"
+import PostgresSvg from "../../assets/skills/postgres.svg"
+import MssqlSvg from "../../assets/skills/mssql.svg"
+import SqliteSvg from "../../assets/skills/sqlite.svg"
+import RedisSvg from "../../assets/skills/redis.svg"
+
+import Html5Svg from "../../assets/skills/html5.svg"
+import Css3svg from "../../assets/skills/css3.svg"
+import Scsssvg from "../../assets/skills/scss.svg"
+import Bootstrapsvg from "../../assets/skills/bootstrap.svg"
+import TailwindSvg from "../../assets/skills/tailwind.svg"
+
+import GitSvg from "../../assets/skills/git.svg"
+import DockerSvg from "../../assets/skills/docker.svg"
+import figmaSvg from "../../assets/skills/figma.svg"
+import JupyterSvg from "../../assets/skills/jupyter-notebook.svg"
+import LinuxSvg from "../../assets/skills/linux.svg"
+
 const SkillRow = styled.div`
     flex-wrap: wrap;
     display: flex;
@@ -17,7 +53,13 @@ const Skill = styled.div`
    gap: 5%;
 `
 
-function Skills(showModal: boolean, closeModal: (event: React.MouseEvent<Element, MouseEvent>) => void, isMobile: boolean) {
+interface SkillsProps {
+  showModal: boolean;
+  closeModal: (event: React.MouseEvent<Element, MouseEvent>) => void;
+  isMobile: boolean;
+}
+
+const Skills: React.FC<SkillsProps> = ({ showModal, closeModal, isMobile }) => {
   return (
     showModal && (
       <>
@@ -34,130 +76,138 @@ function Skills(showModal: boolean, closeModal: (event: React.MouseEvent<Element
               <h2>Programming languages</h2>
                <SkillRow>
                 <Skill>
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg" width="50px" alt="Rustlang logo" />
+                 <img src={RustSvg} width="50px" alt="Rustlang logo" />
                  <h3>Rust</h3>
                 </Skill>
                 <Skill>
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" width="50px" alt="TypeScript logo" />
+                 <img src={TypescriptSvg} width="50px" alt="TypeScript logo" />
                  <h3>TypeScript</h3>
                 </Skill>
                 <Skill>
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="50px" alt="JavaScript logo" />
+                 <img src={JavascriptSvg} width="50px" alt="JavaScript logo" />
                  <h3>JavaScript</h3>
                 </Skill>
                 <Skill>
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="50px" alt="Python logo" />
+                 <img src={PythonSvg} width="50px" alt="Python logo" />
                  <h3>Python</h3>
                 </Skill>
                 <Skill>
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" width="50px" alt="C# logo" />
+                 <img src={CsharpSvg} width="50px" alt="C# logo" />
                  <h3>C#</h3>
                 </Skill>
                 <Skill>
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg" width="50px" alt="Haskell logo" />
+                 <img src={HaskellSvg} width="50px" alt="Haskell logo" />
                  <h3>Haskell</h3>
                 </Skill>
                </SkillRow>
               <h2>Backend</h2>
                <SkillRow>
                <Skill>
-                    <img src="https://actix.rs/img/logo.png" width="50px" alt="Actix logo" />
+                    <img src={ActixPng} width="50px" alt="Actix logo" />
                     <h3>Actix</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" width="50px" alt="Node.js logo" />
+                    <img src={NodePng} width="50px" alt="Node.js logo" />
                     <h3>Node.js</h3>
                     </Skill>
                <Skill>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg" width="50px" alt=".NET logo" />
+                    <img src={DotnetSvg} width="50px" alt=".NET logo" />
                     <h3>ASP .NET</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" width="50px" alt="Express.js logo" />
+                    <img src={ExpressSvg} width="50px" alt="Express.js logo" />
                     <h3>Express.js</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" width="50px" alt="Flask logo" />
+                    <img src={FlaskSvg} width="50px" alt="Flask logo" />
                     <h3>Flask</h3>
                     </Skill>
                </SkillRow>
                <h2>Frontend</h2>
                 <SkillRow>
                     <Skill>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="50px" alt="React logo" />
+                    <img src={ReactSvg} width="50px" alt="React logo" />
                     <h3>React</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg" width="50px" alt="Angular logo" />
+                    <img src={AngularSvg} width="50px" alt="Angular logo" />
                     <h3>Angular</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" width="40px" alt="Svelte logo" />
+                    <img src={SvelteSvg} width="40px" alt="Svelte logo" />
                     <h3>Svelte</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://www.solidjs.com/assets/logo-123b04bc.svg" width="50px" alt="Solid logo" />
+                    <img src={SolidSvg} width="50px" alt="Solid logo" />
                     <h3>Solid.js</h3>
                     </Skill>
                 </SkillRow>
                <h2>Databases</h2>
                <SkillRow>
-               <Skill>
-                    <img src="https://www.vectorlogo.zone/logos/mysql/mysql-official.svg" width="50px" alt="MySql logo" />
+                    <Skill>
+                    <img src={MysqlSvg} width="50px" alt="MySql logo" />
                     <h3>MySql</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" width="50px" alt="Sqlite logo" />
+                    <img src={PostgresSvg} width="40px" alt="MySql logo" />
+                    <h3>PostgreSQL</h3>
+                    </Skill>
+                    <Skill>
+                    <img src={MssqlSvg} width="50px" alt="MySql logo" />
+                    <h3>Microsoft Sql Server</h3>
+                    </Skill>
+                    <Skill>
+                    <img src={SqliteSvg} width="50px" alt="Sqlite logo" />
                     <h3>Sqlite</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://www.vectorlogo.zone/logos/redis/redis-icon.svg" width="50px" alt="Redis logo" />
+                    <img src={RedisSvg} width="50px" alt="Redis logo" />
                     <h3>Redis</h3>
                     </Skill>
                 </SkillRow>
                 <h2>Design</h2>
                <SkillRow>
                <Skill>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="50px" alt="HTML5 logo" />
+                    <img src={Html5Svg} width="50px" alt="HTML5 logo" />
                     <h3>HTML5</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="40px" alt="CSS logo" />
+                    <img src={Css3svg} width="40px" alt="CSS logo" />
                     <h3>CSS</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg" width="50px" alt="SCSS logo" />
+                    <img src={Scsssvg} width="50px" alt="SCSS logo" />
                     <h3>SCSS</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" width="50px" alt="Bootstrap logo" />
+                    <img src={Bootstrapsvg} width="50px" alt="Bootstrap logo" />
                     <h3>Bootstrap</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="50px" alt="Tailwind logo" />
+                    <img src={TailwindSvg} width="50px" alt="Tailwind logo" />
                     <h3>Tailwind</h3>
                     </Skill>
                 </SkillRow>
                 <h2>Tools</h2>
                <SkillRow>
                <Skill>
-                    <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg" width="50px" alt="Git logo" />
+                    <img src={GitSvg} width="50px" alt="Git logo" />
                     <h3>Git</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://www.svgrepo.com/show/349342/docker.svg" width="50px" alt="Docker logo" />
+                    <img src={DockerSvg} width="50px" alt="Docker logo" />
                     <h3>Docker</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" width="40px" alt="Figma logo" />
+                    <img src={figmaSvg} width="40px" alt="Figma logo" />
                     <h3>Figma</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-icon.svg" width="40px" alt="Figma logo" />
+                    <img src={JupyterSvg} width="40px" alt="Figma logo" />
                     <h3>Jupyter Notebook</h3>
                     </Skill>
                     <Skill>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" width="50px" alt="Linux logo" />
+                    <img src={LinuxSvg} width="50px" alt="Linux logo" />
                     <h3>Linux</h3>
                     </Skill>
                 </SkillRow>
