@@ -1,4 +1,4 @@
-import{s as r,j as e,a as i}from"./index-T0wwsl29.js";import{l as n,a as h,t as l}from"./layoutStyling-zq1IpXb3.js";const c=r.div`
+import{s as r,j as e,a as i}from"./index-2jz_ODTa.js";import{l as n,a as h,t as l}from"./layoutStyling-i11XG2MH.js";const c=r.div`
   display: flex;
   justify-content: center;
   gap: 10%;
