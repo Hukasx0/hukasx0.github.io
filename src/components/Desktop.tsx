@@ -81,7 +81,7 @@ function Desktop() {
           <Credits showModal={creditsModal} closeModal={closeCreditsModal} isMobile={isMobile} />
         </Suspense>
         <Suspense>
-          <WebampComponent webampDisplay={webampDisplay} setWebampDisplay={setWebampDisplay} />
+          { webampDisplay && <WebampComponent webampDisplay={webampDisplay} setWebampDisplay={setWebampDisplay} /> }
         </Suspense>
         { Shortcuts(openAboutModal, openCvModal, openPortfolioModal, openSkillsModal, openWebamp) }
         { Taskbar(openAboutModal, openCvModal, openPortfolioModal, openSkillsModal, openCreditsModal) }
