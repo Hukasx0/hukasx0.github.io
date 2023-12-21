@@ -2,7 +2,7 @@ import { useState, useCallback, lazy, Suspense } from 'react';
 import Taskbar from './taskbar/Taskbar';
 import Shortcuts from './Shortcuts';
 
-const About = lazy(() => import('./shortcuts/About'));
+import About from './shortcuts/About';
 const CV = lazy(() => import('./shortcuts/CV'));
 const Portfolio = lazy(() => import('./shortcuts/Portfolio'));
 const Skills = lazy(() => import('./shortcuts/Skills'));
@@ -73,8 +73,8 @@ function Desktop() {
 
   return (
     <>
+      <About showModal={aboutModal} closeModal={closeAboutModal} isMobile={isMobile} />
       <Suspense>
-          <About showModal={aboutModal} closeModal={closeAboutModal} isMobile={isMobile} />
           <CV showModal={cvModal} closeModal={closeCvModal} isMobile={isMobile} />
           <Portfolio showModal={portfolioModal} closeModal={closePortfolioModal} isMobile={isMobile} />
           <Skills showModal={skillsModal} closeModal={closeSkillsModal} isMobile={isMobile} />
