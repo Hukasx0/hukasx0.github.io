@@ -4,12 +4,14 @@ import * as S from '../layoutStyling';
 
 import styled from 'styled-components';
 
-import GithubSvg from "../../assets/socials/github.svg"
-import MisskeySvg from "../../assets/socials/misskey.svg"
-import MatrixSvg from "../../assets/socials/matrix.svg"
-import TryhackmePng from "../../assets/socials/THMlogo.png"
-import HacktheboxWebp from "../../assets/socials/hackthebox.webp"
-import LeetcodePng from "../../assets/socials/leetcode.png"
+import Avatar from "../../assets/avatar.png";
+
+import GithubSvg from "../../assets/socials/github.svg";
+import MisskeySvg from "../../assets/socials/misskey.svg";
+import MatrixSvg from "../../assets/socials/matrix.svg";
+import TryhackmePng from "../../assets/socials/THMlogo.png";
+import HacktheboxWebp from "../../assets/socials/hackthebox.webp";
+import LeetcodePng from "../../assets/socials/leetcode.png";
 
 const ImageDiv = styled.div`
   display: flex;
@@ -53,7 +55,7 @@ const About: React.FC<AboutProps> = ({ showModal, closeModal, isMobile }) => {
         >
           <S.layoutMainContent bg="white" boxShadow="in">
             <ImageDiv>
-              <img src="https://avatars.githubusercontent.com/u/82332291?v=4" alt="Github avatar" />
+              <img src={Avatar} alt="Github avatar" />
             </ImageDiv>
             <S.textModal>
               <h1>Hubert "Hukasx0" Kasperek</h1>

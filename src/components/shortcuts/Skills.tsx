@@ -2,41 +2,41 @@ import { Mspaint } from '@react95/icons';
 import * as S from '../layoutStyling';
 import styled from 'styled-components';
 
-import RustSvg from "../../assets/skills/rust.svg"
-import TypescriptSvg from "../../assets/skills/typescript.svg"
-import JavascriptSvg from "../../assets/skills/javascript.svg"
-import PythonSvg from "../../assets/skills/python.svg"
-import CsharpSvg from "../../assets/skills/csharp.svg"
-import HaskellSvg from "../../assets/skills/haskell.svg"
+import RustSvg from "../../assets/skills/rust.svg";
+import TypescriptSvg from "../../assets/skills/typescript.svg";
+import JavascriptSvg from "../../assets/skills/javascript.svg";
+import PythonSvg from "../../assets/skills/python.svg";
+import CsharpSvg from "../../assets/skills/csharp.svg";
+import HaskellSvg from "../../assets/skills/haskell.svg";
 
-import ActixPng from "../../assets/skills/actix.png"
-import NodePng from "../../assets/skills/nodejs.png"
-import DotnetSvg from "../../assets/skills/dotnet.svg"
-import ExpressSvg from "../../assets/skills/express.svg"
-import FlaskSvg from "../../assets/skills/flask.svg"
+import ActixPng from "../../assets/skills/actix.png";
+import NodePng from "../../assets/skills/nodejs.png";
+import DotnetSvg from "../../assets/skills/dotnet.svg";
+import ExpressSvg from "../../assets/skills/express.svg";
+import FlaskSvg from "../../assets/skills/flask.svg";
 
-import ReactSvg from "../../assets/skills/react.svg"
-import AngularSvg from "../../assets/skills/angular.svg"
-import SvelteSvg from "../../assets/skills/svelte.svg"
-import SolidSvg from "../../assets/skills/solid.svg"
+import ReactSvg from "../../assets/skills/react.svg";
+import AngularSvg from "../../assets/skills/angular.svg";
+import SvelteSvg from "../../assets/skills/svelte.svg";
+import SolidSvg from "../../assets/skills/solid.svg";
 
-import MysqlSvg from "../../assets/skills/mysql.svg"
-import PostgresSvg from "../../assets/skills/postgres.svg"
-import MssqlSvg from "../../assets/skills/mssql.svg"
-import SqliteSvg from "../../assets/skills/sqlite.svg"
-import RedisSvg from "../../assets/skills/redis.svg"
+import MysqlSvg from "../../assets/skills/mysql.svg";
+import PostgresSvg from "../../assets/skills/postgres.svg";
+import MssqlSvg from "../../assets/skills/mssql.svg";
+import SqliteSvg from "../../assets/skills/sqlite.svg";
+import RedisSvg from "../../assets/skills/redis.svg";
 
-import Html5Svg from "../../assets/skills/html5.svg"
-import Css3svg from "../../assets/skills/css3.svg"
-import Scsssvg from "../../assets/skills/scss.svg"
-import Bootstrapsvg from "../../assets/skills/bootstrap.svg"
-import TailwindSvg from "../../assets/skills/tailwind.svg"
+import Html5Svg from "../../assets/skills/html5.svg";
+import Css3svg from "../../assets/skills/css3.svg";
+import Scsssvg from "../../assets/skills/scss.svg";
+import Bootstrapsvg from "../../assets/skills/bootstrap.svg";
+import TailwindSvg from "../../assets/skills/tailwind.svg";
 
-import GitSvg from "../../assets/skills/git.svg"
-import DockerSvg from "../../assets/skills/docker.svg"
-import figmaSvg from "../../assets/skills/figma.svg"
-import JupyterSvg from "../../assets/skills/jupyter-notebook.svg"
-import LinuxSvg from "../../assets/skills/linux.svg"
+import GitSvg from "../../assets/skills/git.svg";
+import DockerSvg from "../../assets/skills/docker.svg";
+import figmaSvg from "../../assets/skills/figma.svg";
+import JupyterSvg from "../../assets/skills/jupyter-notebook.svg";
+import LinuxSvg from "../../assets/skills/linux.svg";
 
 const SkillRow = styled.div`
     flex-wrap: wrap;

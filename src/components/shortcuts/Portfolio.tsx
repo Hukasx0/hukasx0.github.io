@@ -3,10 +3,10 @@ import * as S from '../layoutStyling';
 import styled from 'styled-components';
 
 import CharacterFactoryImage from "../../assets/projects_imgs/character-factory.png";
-import AiCompanionImage from "../../assets/projects_imgs/ai-companion.png"
-import RoggerImage from "../../assets/projects_imgs/rogger.png"
-import Zsp2WagrowiecWebsiteImage from "../../assets/projects_imgs/zsp2-wagrowiec-website.png"
-import HomeMiddlemanImage from "../../assets/projects_imgs/home-middleman.png"
+import AiCompanionImage from "../../assets/projects_imgs/ai-companion.png";
+import RoggerImage from "../../assets/projects_imgs/rogger.png";
+import Zsp2WagrowiecWebsiteImage from "../../assets/projects_imgs/zsp2-wagrowiec-website.png";
+import HomeMiddlemanImage from "../../assets/projects_imgs/home-middleman.png";
 
 const SkillContainer = styled.div`
     display: flex;
