@@ -173,7 +173,7 @@ const Skills: React.FC<SkillsProps> = ({ showModal, closeModal, isMobile }) => {
                     </Skill>
                     <Skill>
                     <img src={Css3svg} width="40px" alt="CSS logo" />
-                    <h3>CSS</h3>
+                    <h3>CSS3</h3>
                     </Skill>
                     <Skill>
                     <img src={Scsssvg} width="50px" alt="SCSS logo" />
