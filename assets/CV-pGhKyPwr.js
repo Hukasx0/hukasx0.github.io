@@ -1,0 +1,1 @@
+import{j as t,l as i,W as s,a as r,t as o}from"./index-OaxOF7qE.js";const l=({showModal:a,closeModal:n,isMobile:e})=>a&&t.jsx(t.Fragment,{children:t.jsx(i,{isMobile:e,title:"CV",closeModal:n,height:"100%",icon:t.jsx(s,{variant:"32x32_4"}),children:t.jsx(r,{bg:"white",boxShadow:"in",children:t.jsx(o,{children:t.jsx("h1",{children:"TODO"})})})})});export{l as default};
