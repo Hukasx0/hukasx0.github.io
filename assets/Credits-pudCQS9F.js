@@ -1,4 +1,4 @@
-import{s as r,j as e,l as i,b as n,a as h,t as l}from"./index-OaxOF7qE.js";const c=r.div`
+import{s as r,j as e,l as i,b as n,a as h,t as l}from"./index-VairEjdE.js";const c=r.div`
   display: flex;
   justify-content: center;
   gap: 10%;
