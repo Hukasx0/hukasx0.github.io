@@ -1,8 +1,7 @@
 import { TaskBar, List } from '@react95/core';
-import { Main200, MsnsignIcoApp, Wininet32546, Winhlp324000, Mail, Mapi32801, Mcm502, Awfxcg321305, Wmsui323924, Notepad2, Mspaint, Packager, Mailnews20 } from '@react95/icons'
+import { Main200, MsnsignIcoApp, Wininet32546, Winhlp324000, Mail, Mapi32801, Mcm502, Awfxcg321305, Wmsui323924, Notepad2, Mspaint, Packager, Mailnews20, Mmsys113, Wordpad } from '@react95/icons'
 
 function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => void,
-                 openCv: (event: React.MouseEvent<Element, MouseEvent>) => void,
                  openPortfolio: (event: React.MouseEvent<Element, MouseEvent>) => void,
                  openSkills: (event: React.MouseEvent<Element, MouseEvent>) => void,
                  openCredits: (event: React.MouseEvent<Element, MouseEvent>) => void) {
@@ -22,12 +21,6 @@ function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => vo
               </List.Item>
               <List.Item
                 icon={<Notepad2 variant="32x32_4"/>}
-                onClick={openCv}
-              >
-              cv.txt
-              </List.Item>
-              <List.Item
-                icon={<Notepad2 variant="32x32_4"/>}
                 onClick={openAbout}
               >
               about_me.txt
@@ -37,6 +30,26 @@ function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => vo
                 onClick={openSkills}
               >
               skills.txt
+              </List.Item>
+              <List.Item
+                icon={<Mmsys113 variant="32x32_4"/>}
+                onClick={() =>
+                  window
+                    .open('https://hukasx0.github.io/portfolio/', '_blank')
+                    ?.focus()
+                }
+              >
+              Portfolio.html
+              </List.Item>
+              <List.Item
+                icon={<Mmsys113 variant="32x32_4"/>}
+                onClick={() =>
+                  window
+                    .open('https://hukasx0.github.io/blog/', '_blank')
+                    ?.focus()
+                }
+              >
+              Blog.html
               </List.Item>
               </List>
             </List.Item>
@@ -99,16 +112,20 @@ function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => vo
             <List.Item
                 icon={<Mail variant='32x32_4' />}
                 onClick={() => {
-                  window.location.href = `mailto:hubertkasp13@gmail.com`;
+                  window.location.href = `https://hukasx0.github.io/portfolio/contact`;
                 }}
                 >
               Contact
             </List.Item>
             <List.Item
-                icon={<Packager variant="32x32_4"/>}
-                onClick={openPortfolio}
+                icon={<Wordpad variant="32x32_4"/>}
+                onClick={() =>
+                  window
+                    .open('https://hukasx0.github.io/portfolio/', '_blank')
+                    ?.focus()
+                }
               >
-              Projects
+              Portfolio
             </List.Item>
             <List.Item
                 icon={<Mspaint variant="32x32_4"/>}

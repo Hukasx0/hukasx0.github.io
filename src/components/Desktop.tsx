@@ -3,7 +3,6 @@ import Taskbar from './taskbar/Taskbar';
 import Shortcuts from './Shortcuts';
 
 import About from './shortcuts/About';
-const CV = lazy(() => import('./shortcuts/CV'));
 const Portfolio = lazy(() => import('./shortcuts/Portfolio'));
 const Skills = lazy(() => import('./shortcuts/Skills'));
 const Credits = lazy(() => import('./shortcuts/Credits'));
@@ -23,16 +22,6 @@ function Desktop() {
 
     const closeAboutModal = useCallback(() => {
       setAboutModal(false);
-    }, []);
-
-    const [cvModal, setCvModal] = useState(false);
-
-    const openCvModal = useCallback(() => {
-      setCvModal(true);
-    }, []);
-
-    const closeCvModal = useCallback(() => {
-      setCvModal(false);
     }, []);
 
     const [portfolioModal, setPortfolioModal] = useState(false);
@@ -75,7 +64,6 @@ function Desktop() {
     <>
       <About showModal={aboutModal} closeModal={closeAboutModal} isMobile={isMobile} />
       <Suspense>
-          <CV showModal={cvModal} closeModal={closeCvModal} isMobile={isMobile} />
           <Portfolio showModal={portfolioModal} closeModal={closePortfolioModal} isMobile={isMobile} />
           <Skills showModal={skillsModal} closeModal={closeSkillsModal} isMobile={isMobile} />
           <Credits showModal={creditsModal} closeModal={closeCreditsModal} isMobile={isMobile} />
@@ -83,8 +71,8 @@ function Desktop() {
         <Suspense>
           { webampDisplay && <WebampComponent webampDisplay={webampDisplay} setWebampDisplay={setWebampDisplay} /> }
         </Suspense>
-        { Shortcuts(openAboutModal, openCvModal, openPortfolioModal, openSkillsModal, openWebamp) }
-        { Taskbar(openAboutModal, openCvModal, openPortfolioModal, openSkillsModal, openCreditsModal) }
+        { Shortcuts(openAboutModal, openPortfolioModal, openSkillsModal, openWebamp) }
+        { Taskbar(openAboutModal, openPortfolioModal, openSkillsModal, openCreditsModal) }
     </>
   )
 }

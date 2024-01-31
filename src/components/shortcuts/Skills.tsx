@@ -14,6 +14,7 @@ import NodePng from "../../assets/skills/nodejs.png";
 import DotnetSvg from "../../assets/skills/dotnet.svg";
 import ExpressSvg from "../../assets/skills/express.svg";
 import FlaskSvg from "../../assets/skills/flask.svg";
+import NextjsSvg from "../../assets/skills/nextjs.svg";
 
 import ReactSvg from "../../assets/skills/react.svg";
 import AngularSvg from "../../assets/skills/angular.svg";
@@ -73,6 +74,7 @@ const Skills: React.FC<SkillsProps> = ({ showModal, closeModal, isMobile }) => {
           <S.layoutMainContent bg="white" boxShadow="in">
             <S.textModal>
               <h1>My skills</h1>
+              <h2>You can find my professional skills on <a href="https://hukasx0.github.io/portfolio">my Portfolio website</a></h2>
               <h2>Programming languages</h2>
                <SkillRow>
                 <Skill>
@@ -117,6 +119,10 @@ const Skills: React.FC<SkillsProps> = ({ showModal, closeModal, isMobile }) => {
                     <Skill>
                     <img src={ExpressSvg} width="50px" alt="Express.js logo" />
                     <h3>Express.js</h3>
+                    </Skill>
+                    <Skill>
+                    <img src={NextjsSvg} width="50px" alt="Next.js logo" />
+                    <h3>Next.js</h3>
                     </Skill>
                     <Skill>
                     <img src={FlaskSvg} width="50px" alt="Flask logo" />

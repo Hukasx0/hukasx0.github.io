@@ -43,6 +43,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ showModal, closeModal, isMobile }
           <S.layoutMainContent bg="white" boxShadow="in">
             <S.textModal>
               <h1>My projects</h1>
+              <h2>You can find more of my projects at <a href="https://hukasx0.github.io/portfolio/projects">my Portfolio website</a></h2>
               <SkillContainer>
                 <h2><a href="https://github.com/Hukasx0/character-factory" target='_blank'>Character factory</a></h2>
                 <img src={CharacterFactoryImage} alt="character factory webui screenshot" />

@@ -25,7 +25,6 @@ const Icon = styled.div<IconProps>`
 `;
 
 function Shortcuts(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => void,
-                   openCv: (event: React.MouseEvent<Element, MouseEvent>) => void,
                    openPortfolio: (event: React.MouseEvent<Element, MouseEvent>) => void,
                    openSkills: (event: React.MouseEvent<Element, MouseEvent>) => void,
                    openWebamp: (event: React.MouseEvent<Element, MouseEvent>) => void) {
@@ -41,6 +40,10 @@ function Shortcuts(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => 
         My computer
     </Icon>
     <Icon clickable={true}>
+      <Wordpad variant="32x32_4" onClick={redirect("https://hukasx0.github.io/portfolio")}/>
+        Portfolio.html
+    </Icon>
+    <Icon clickable={true}>
       <Bookmark variant="32x32_4" onClick={redirect("https://hukasx0.github.io/blog")}/>
         Blog.html
     </Icon>
@@ -51,10 +54,6 @@ function Shortcuts(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => 
     <Icon clickable={true}>
       <Packager variant="32x32_4" onClick={openPortfolio}/>
       Projects
-    </Icon>
-    <Icon clickable={true}>
-      <Wordpad variant="32x32_4" onClick={openCv}/>
-      CV
     </Icon>
     <Icon clickable={true}>
       <Drvspace7 variant="32x32_4" onClick={openAbout}/>
