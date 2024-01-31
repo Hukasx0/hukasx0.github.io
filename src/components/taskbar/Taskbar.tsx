@@ -1,5 +1,5 @@
 import { TaskBar, List } from '@react95/core';
-import { Main200, MsnsignIcoApp, Wininet32546, Winhlp324000, Mail, Mapi32801, Mcm502, Awfxcg321305, Wmsui323924, Notepad2, Mspaint, Packager, Mailnews20, Mmsys113, Wordpad } from '@react95/icons'
+import { Main200, MsnsignIcoApp, Wininet32546, Winhlp324000, Mail, Mapi32801, Mcm502, Awfxcg321305, Wmsui323924, Notepad2, Mspaint, Mailnews20, Mmsys113, Wordpad } from '@react95/icons'
 
 function Taskbar(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => void,
                  openPortfolio: (event: React.MouseEvent<Element, MouseEvent>) => void,
