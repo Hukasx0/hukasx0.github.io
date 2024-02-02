@@ -73,8 +73,8 @@ const About: React.FC<AboutProps> = ({ showModal, closeModal, isMobile }) => {
               </span>
               <h1>My other websites</h1>
               <Websites>
-                <h2><a href="https://hukasx0.github.io/portfolio/" target='_blank'>Portfolio</a></h2>
-                <h2><a href="https://hukasx0.github.io/blog/" target='_blank'>Blog</a></h2>
+                <h2><a href="https://hukasx0.github.io/portfolio/">Portfolio</a></h2>
+                <h2><a href="https://hukasx0.github.io/blog/">Blog</a></h2>
               </Websites>
               <h1>My socials</h1>
               <Socials>
