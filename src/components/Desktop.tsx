@@ -3,8 +3,6 @@ import Taskbar from './taskbar/Taskbar';
 import Shortcuts from './Shortcuts';
 
 import About from './shortcuts/About';
-const Portfolio = lazy(() => import('./shortcuts/Portfolio'));
-const Skills = lazy(() => import('./shortcuts/Skills'));
 const Credits = lazy(() => import('./shortcuts/Credits'));
 const WebampComponent = lazy(() => import('./shortcuts/MusicPlayer'));
 
@@ -22,26 +20,6 @@ function Desktop() {
 
     const closeAboutModal = useCallback(() => {
       setAboutModal(false);
-    }, []);
-
-    const [portfolioModal, setPortfolioModal] = useState(false);
-
-    const openPortfolioModal = useCallback(() => {
-      setPortfolioModal(true);
-    }, []);
-
-    const closePortfolioModal = useCallback(() => {
-      setPortfolioModal(false);
-    }, []);
-
-    const [skillsModal, setSkillsModal] = useState(false);
-
-    const openSkillsModal = useCallback(() => {
-      setSkillsModal(true);
-    }, []);
-
-    const closeSkillsModal = useCallback(() => {
-      setSkillsModal(false);
     }, []);
 
     const [creditsModal, setCreditsModal] = useState(false);
@@ -64,15 +42,13 @@ function Desktop() {
     <>
       <About showModal={aboutModal} closeModal={closeAboutModal} isMobile={isMobile} />
       <Suspense>
-          <Portfolio showModal={portfolioModal} closeModal={closePortfolioModal} isMobile={isMobile} />
-          <Skills showModal={skillsModal} closeModal={closeSkillsModal} isMobile={isMobile} />
           <Credits showModal={creditsModal} closeModal={closeCreditsModal} isMobile={isMobile} />
         </Suspense>
         <Suspense>
           { webampDisplay && <WebampComponent webampDisplay={webampDisplay} setWebampDisplay={setWebampDisplay} /> }
         </Suspense>
-        { Shortcuts(openAboutModal, openPortfolioModal, openSkillsModal, openWebamp) }
-        { Taskbar(openAboutModal, openPortfolioModal, openSkillsModal, openCreditsModal) }
+        { Shortcuts(openAboutModal, openWebamp) }
+        { Taskbar(openAboutModal, openCreditsModal) }
     </>
   )
 }

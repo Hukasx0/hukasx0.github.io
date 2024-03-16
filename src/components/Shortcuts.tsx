@@ -25,8 +25,6 @@ const Icon = styled.div<IconProps>`
 `;
 
 function Shortcuts(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => void,
-                   openPortfolio: (event: React.MouseEvent<Element, MouseEvent>) => void,
-                   openSkills: (event: React.MouseEvent<Element, MouseEvent>) => void,
                    openWebamp: (event: React.MouseEvent<Element, MouseEvent>) => void) {
 
   const redirect = (href: string) => () => {
@@ -52,16 +50,16 @@ function Shortcuts(openAbout: (event: React.MouseEvent<Element, MouseEvent>) => 
         winamp.exe
     </Icon>
     <Icon clickable={true}>
-      <Packager variant="32x32_4" onClick={openPortfolio}/>
-      Projects
+      <Packager variant="32x32_4" onClick={redirect("https://hukasx0.github.io/portfolio/projects")}/>
+      Projects.html
     </Icon>
     <Icon clickable={true}>
       <Drvspace7 variant="32x32_4" onClick={openAbout}/>
         About me
     </Icon>
     <Icon clickable={true}>
-      <Mspaint variant="32x32_4" onClick={openSkills}/>
-        Skills
+      <Mspaint variant="32x32_4" onClick={redirect("https://hukasx0.github.io/portfolio")}/>
+        Skills.html
     </Icon>
     </>
   )
